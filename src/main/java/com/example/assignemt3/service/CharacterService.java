@@ -45,4 +45,8 @@ public class CharacterService {
         }
         characterRepository.deleteById(id);
     }
+
+    public List<CharacterEntity> getCharactersBySpecies(String species) {
+        return characterRepository.findBySpeciesContainingIgnoreCase(species);
+    }
 }
