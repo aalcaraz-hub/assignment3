@@ -51,4 +51,8 @@ public class CharacterService {
     public List<CharacterEntity> getCharactersBySpecies(String species) {
         return characterRepository.findBySpeciesContainingIgnoreCase(species);
     }
+
+    public List<CharacterEntity> getCharactersByName(String name) {
+        return characterRepository.findByNameContainingIgnoreCase(name);
+    }
 }

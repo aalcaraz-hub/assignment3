@@ -49,4 +49,9 @@ public class CharacterController {
     public List<CharacterEntity> getCharactersBySpecies(@RequestParam String species) {
         return characterService.getCharactersBySpecies(species);
     }
+
+    @GetMapping (params = "name")
+    public List<CharacterEntity> getCharactersByName(@RequestParam String name) {
+        return characterService.getCharactersByName(name);
+    }
 }
