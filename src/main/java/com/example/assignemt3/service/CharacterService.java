@@ -3,6 +3,8 @@ package com.example.assignemt3.service;
 import com.example.assignemt3.entity.CharacterEntity;
 import com.example.assignemt3.repository.CharacterRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class CharacterService {
     }
 
     public CharacterEntity getCharacterById(Long id) {
-        return characterRepository.findById(id).orElseThrow(() -> new RuntimeException("Character not found with id: " + id));
+        return characterRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Character not found with id: " + id));
     }
 
     public CharacterEntity addCharacter(CharacterEntity character) {
