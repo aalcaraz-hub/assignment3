@@ -6,7 +6,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>${title} | Sanrio Characters</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
       <link rel="stylesheet" href="/styles.css">
     </head>
 
@@ -25,7 +25,7 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/characters">Details</a>
+                    <a class="nav-link" href="/characters/2">Details</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about">About</a>
