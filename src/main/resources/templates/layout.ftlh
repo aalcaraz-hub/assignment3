@@ -36,9 +36,10 @@
                 </li>
             </ul>
 
-            <form class="d-flex ms-auto" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-primary" type="submit">Search by name</button>
+            <form class="d-flex ms-auto" action="/" method="get" role="search">
+                <input class="form-control me-2" type="search" name="name" placeholder="Search by name">
+              <input class="form-control me-2" type="search" name="species" placeholder="Search by species">
+              <button class="btn btn-primary" type="submit">Search</button>
             </form>
         </div>
         </div>

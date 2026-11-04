@@ -9,6 +9,8 @@ import com.example.assignemt3.entity.CharacterEntity;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import java.util.List;
 
 @Controller 
 @RequestMapping
@@ -21,8 +23,22 @@ public class CharacterUIController {
     }
 
     @GetMapping("/")
-    public String listCharacters(Model model) {
-        model.addAttribute("characters", characterService.getAllCharacters());
+    public String listCharacters(
+        @RequestParam(required = false) String name,
+        @RequestParam(required = false) String species,
+        Model model) {
+
+        List<CharacterEntity> characters = characterService.getAllCharacters();
+        if (name != null && !name.isBlank()){
+            characters = characterService.getCharactersByName(name);
+        }
+        if (species != null && !species.isBlank()){
+            characters = characterService.getCharactersBySpecies(species);
+        }
+        model.addAttribute("characters", characters);
+        model.addAttribute("name", name);
+        model.addAttribute("species", species);
+
         return "index";
     }
 
