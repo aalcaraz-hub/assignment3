@@ -27,6 +27,8 @@ public class CharacterEntity {
     @NotBlank
     @NotNull
     private String species;
+
+    private String imageUrl;
     
     public CharacterEntity() {
     }
@@ -69,5 +71,13 @@ public class CharacterEntity {
 
     public void setSpecies(String species) {
         this.species = species;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
