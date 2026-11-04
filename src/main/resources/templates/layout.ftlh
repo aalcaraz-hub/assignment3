@@ -13,8 +13,9 @@
     <body class="${bodyClass}">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS_yX3a9TAuZTuFCkmmxTvAtr6QKBfFfsnZry_tnBFEg&s=10" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+          <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS_yX3a9TAuZTuFCkmmxTvAtr6QKBfFfsnZry_tnBFEg&s=10" alt="Logo" width="30px" height="30px" class="d-inline-block align-text-top">
+            <span><strong>Hello Kitty and Friends</strong></span>
           </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,16 +23,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav nav-underline">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/"><strong>Home</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/characters/2">Details</a>
+                    <a class="nav-link" href="/characters/2"><strong>Details</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="/about"><strong>About</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/characters/create">Add a Character</a>
+                    <a class="nav-link" href="/characters/create"><strong>Add a Character</strong></a>
                 </li>
             </ul>
 
