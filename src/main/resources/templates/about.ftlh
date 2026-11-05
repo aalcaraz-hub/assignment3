@@ -8,8 +8,10 @@
 
     <div class="card">
       <div class="card-body">
-        <p><strong>This project is a simple web application that showcases a collection of Sanrio characters, including Hello Kitty and her friends. The application allows users to view details about one specific character, learn fun facts, and even add new characters to the collection.(not functional)</strong></p>
-        <p><strong>I decided on this theme of characters because it is my first time ever creating a static web app and it was a theme I could put my personality into and have fun with. I utilized HTML, CSS, and Bootstrap for styling. Bootstrap was a great resource as someone who has no experience with web development. While it took a lot of trial and error, it helped me learn and feel more confident in my abilities to make neat and structured web pages. I tried my best to make the pages somewhat cohesive, including color schemes, matching buttons to navigate the user back to the home page, and a navigation bar that stays consistent within all pages and stands out to indicate the current one being viewed. I look forward to learning new techniques and how I can further improve so that I can implement them in our final team project!</strong></p>
+        <p><strong>This project is a web application that showcases a collection of Sanrio characters. Users can browse through the collection, view details about each character, filter results based on name or species, and learn interesting facts about them. Users also have the option to add new characters to the collection, edit existing ones, and delete characters if needed.</strong></p>
+        <p><strong>This app is built with Java and uses the Spring Boot framework for the backend and Thymeleaf for the frontend. I added my html files from our previous assignments and converted them into ftlh templates to create a dynamic and interactive user experience. Throughout this semester, I have worked with HTML, CSS, Bootstrap, Java, SpringBoot, and now FreeMarker! My front end is what makes it possible to display the website, whereas the backend handles the logic and communication with the database. Neon has been very useful as well, since it allowed me to configure my connection string and all my characters are stored within the table.
+
+        </strong></p>
             <a class="btn btn-outline-primary" href="index.html" role="button">Back to Home</a>
 
       </div>

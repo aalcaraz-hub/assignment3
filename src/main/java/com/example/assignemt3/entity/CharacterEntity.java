@@ -29,6 +29,8 @@ public class CharacterEntity {
     private String species;
 
     private String imageUrl;
+
+    private String funFacts;
     
     public CharacterEntity() {
     }
@@ -79,5 +81,13 @@ public class CharacterEntity {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getFunFacts() {
+        return funFacts;
+    }
+
+    public void setFunFacts(String funFacts) {
+        this.funFacts = funFacts;
     }
 }

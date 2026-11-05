@@ -39,14 +39,19 @@
   <textarea class="form-control" name="description"  id="exampleFormControlTextarea1" placeholder="Enter 1-2 sentences describing the character." rows="3">${character.description!''}</textarea>
 </div>
 
-<button type="submit" class="btn btn-primary">
-  <#if character.characterId?? && character.characterId != 0>
-    Update Character
-  <#else>
-    Add Character
-  </#if>
+
+<div class="mb-3">
+  <label for="exampleFormControlTextarea2" class="form-label"><strong>Fun Facts*</strong></label>
+  <textarea class="form-control" name="funFacts" id="exampleFormControlTextarea2" placeholder="Enter fun facts about the character seperated by |." rows="3">${character.funFacts!''}</textarea>
+</div>
+
+  <button type="submit" class="btn btn-primary">
+    <#if character.characterId?? && character.characterId != 0>
+      Update Character
+    <#else>
+      Add Character
+    </#if>
 </button>
-</form>
 </div>
 </div>
 
