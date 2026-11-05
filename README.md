@@ -50,7 +50,7 @@ Base path: `/api/characters`
 
 ## Deployed API using Render
 
-Base URL: https://assignment3-ik58.onrender.com
+Live URL: https://assignment3-ik58.onrender.com
 
 Characters Endpoint: https://assignment3-ik58.onrender.com/api/characters
  
