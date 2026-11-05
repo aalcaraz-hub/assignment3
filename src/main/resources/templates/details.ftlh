@@ -14,7 +14,14 @@
     </ul>
   </div>
 </div>
-<a href="/characters/${character.characterId}/edit" class="btn btn-outline-primary">Edit Character</a>
-<a class="btn btn-outline-primary" href="/" role="button">Back to Home</a>
+
+<div class="d-flex gap-2">
+  <a href="/characters/${character.characterId}/edit" class="btn btn-outline-primary">Edit Character</a>
+  <a class="btn btn-outline-primary" href="/" role="button">Back to Home</a>
+  <form action="/characters/${character.characterId}/delete" method="post" onsubmit="return confirm('Are you sure you want to delete this character?');">
+    <button type="submit" class="btn btn-outline-danger">Delete Character</button>
+  </form>
+</div>
+</div>
 
 </@layout.page>

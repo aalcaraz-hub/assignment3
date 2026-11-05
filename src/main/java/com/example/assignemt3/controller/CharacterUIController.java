@@ -78,4 +78,10 @@ public class CharacterUIController {
         characterService.updateCharacter(id, character);
         return "redirect:/characters/" + id;
     }
+
+    @PostMapping("/characters/{id}/delete")
+    public String deleteCharacter(@PathVariable long id) {
+        characterService.deleteCharacter(id);
+        return "redirect:/";
+    }
 }
