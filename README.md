@@ -1,27 +1,27 @@
-# Character REST API
+# Character Gallery Web App
 
-This assignment is a REST API built using Spring Boot, PostgreSQL, Neon, and Render. It's purpose is to manage Sanrio characters; allowing users to search, create, modify, and delete characters.
-
+This assignment is a Spring Boot web application that displays a collection of Sanrio characters. Users can browse the gallery, filter searches by name or species, view character details, as well as edit, add, and remove characters. This application uses Java, Spring Boot, FreeMarker, Neon, etc.
 ## Features
 
 - Create, read, update, and delete characters
 - Partial, case-insensitive search by name or species (chosen attribute to filter by)
 - Filter by species type
-- Bean validation with clear HTTP status codes (400, 404)
 - Configured entirely through environment variables (no secrets in the repo)
-- My characters have the following attributes: name, description, universe, and species
+- My characters have the following attributes: name, description, universe, fun facts, and species
 
-## Entity
+## Web Pages and Routes
 
-**Character** (table `characters`)
-
-| Attribute | Type | Rules |
+| Page | Route | Description |
 |-------|------|-------|
-| `characterId` | Long | Primary key, auto-generated |
-| `name` | String | Required (not null, not blank) |
-| `description` | String | Required (not null, not blank) |
-| `universe` | String | Required (not null, not blank) |
-| `species` | String | Required (not null, not blank) |
+| Home | GET / | Displays character gallery |
+| Details | GET /characters/{id} | Displays unique character details |
+| About | GET /about | Provides info about the project |
+| Add Character | GET /characters/new | Displays the form to add character |
+| Submit Character | POST /characters | Saves new character |
+| Edit character | GET /characters/{id}/edit | Displays the form to edit character (auto-filled in) |
+| Update character | POST /characters/{id} | Updates existing character |
+| Delete character | POST /characters/{id}/delete | Deletes character from gallery |
+
 
 ## Endpoints
 
@@ -37,33 +37,6 @@ Base path: `/api/characters`
 | GET | `/api/characters?species=Bunny` | Filter by one category(species) | 200 |
 | GET | `/api/characters?name=KUROMI` | Search by name (partial, case-insensitive) | 200 |
 
-### Example POST request
-
-```http
-POST /api/characters
-Content-Type: application/json
-
-{
-  "name": "Hello Kitty",
-  "description": "A bright cheerful cat known for her signature bow and friendly nature. She stands 5 apples tall, only weighing 3.",
-  "universe": "Sanrio",
-  "species": "Cat"
-}
-```
-
-### Example PUT request
-
-```http
-POST /api/characters/2
-Content-Type: application/json
-
-{
-  "name": "Hello Kitty",
-  "description": "A cat who loves baking and making new friends.",
-  "universe": "Sanrio",
-  "species": "Cat"
-}
-```
 
 ### Status codes
 
