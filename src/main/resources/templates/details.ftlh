@@ -14,6 +14,7 @@
     </ul>
   </div>
 </div>
+<a href="/characters/${character.characterId}/edit" class="btn btn-outline-primary">Edit Character</a>
 <a class="btn btn-outline-primary" href="/" role="button">Back to Home</a>
 
 </@layout.page>

@@ -32,7 +32,7 @@
                     <a class="nav-link" href="/about"><strong>About</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/characters/create"><strong>Add a Character</strong></a>
+                    <a class="nav-link" href="/characters/new"><strong>Add a Character</strong></a>
                 </li>
             </ul>
 

@@ -54,7 +54,7 @@ public class CharacterUIController {
         return "details";
     }
 
-    @GetMapping("/characters/create")
+    @GetMapping("/characters/new")
     public String createCharacterForm(Model model) {
         model.addAttribute("character", new CharacterEntity());
         return "new-character-form";
@@ -64,5 +64,18 @@ public class CharacterUIController {
     public String addCharacter(@ModelAttribute("character") CharacterEntity character) {
         characterService.addCharacter(character);
         return "redirect:/";
+    }
+
+    @GetMapping("/characters/{id}/edit")
+    public String editCharacterForm(@PathVariable long id, Model model) {
+        CharacterEntity character = characterService.getCharacterById(id);
+        model.addAttribute("character", character);
+        return "new-character-form";
+    }
+
+    @PostMapping("/characters/{id}")
+    public String updateCharacter(@PathVariable long id, @ModelAttribute("character") CharacterEntity character) {
+        characterService.updateCharacter(id, character);
+        return "redirect:/characters/" + id;
     }
 }
